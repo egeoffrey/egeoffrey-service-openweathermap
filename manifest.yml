@@ -1,0 +1,9 @@
+package: myhouse-service-openweathermap
+release: 1
+version: development
+git: myhouse-project/myhouse-service-openweathermap
+modules:
+  - service/openweathermap
+default_config:
+  - service/openweathermap:
+      api_key: 
