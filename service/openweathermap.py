@@ -17,12 +17,12 @@ import json
 import datetime
 import time
  
-from sdk.module.service import Service
-from sdk.utils.datetimeutils import DateTimeUtils
+from sdk.python.module.service import Service
+from sdk.python.utils.datetimeutils import DateTimeUtils
 
-import sdk.utils.web
-import sdk.utils.numbers
-import sdk.utils.exceptions as exception
+import sdk.python.utils.web
+import sdk.python.utils.numbers
+import sdk.python.utils.exceptions as exception
 
 class Openweathermap(Service):
    # What to do when initializing
@@ -69,7 +69,7 @@ class Openweathermap(Service):
             else:
                 url = self.url+"/"+self.get_request_type(request)+"?APPID="+self.config["api_key"]+"&units="+self.units+"&lang="+self.language+"&"+location
                 try:
-                    data = sdk.utils.web.get(url)
+                    data = sdk.python.utils.web.get(url)
                 except Exception,e: 
                     self.log_error("unable to connect to "+url+": "+exception.get(e))
                     return
