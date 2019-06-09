@@ -1,0 +1,4 @@
+icon: cloud-sun
+order: 1
+page: examples/openweathermap
+text: Openweathermap Service
