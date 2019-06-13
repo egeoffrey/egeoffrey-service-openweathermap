@@ -1,5 +1,5 @@
 package: myhouse-service-openweathermap
-revision: 3
+revision: 4
 version: development
 git: myhouse-project/myhouse-service-openweathermap
 modules:
