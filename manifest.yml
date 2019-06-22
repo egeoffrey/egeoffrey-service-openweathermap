@@ -2,7 +2,7 @@ package: myhouse-service-openweathermap
 revision: 6
 version: development
 github: myhouse-project/myhouse-service-openweathermap
-dockerhub: myhouse-project/myhouse-service-openweathermap
+dockerhub: myhouseproject/myhouse-service-openweathermap
 description: Retrieve weather information from OpenWeatherMap
 tags: service weather
 modules:
