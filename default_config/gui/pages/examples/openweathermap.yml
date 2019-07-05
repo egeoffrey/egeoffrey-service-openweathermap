@@ -3,53 +3,53 @@
     sensor: examples/openweathermap/temperature
     size: 3
     title: Temperature
-    type: value
+    widget: value
   - icon_sensor: examples/openweathermap/condition
     sensor: examples/openweathermap/condition_description
     size: 3
     title: Weather Condition
-    type: value
+    widget: value
   - icon: tint
     sensor: examples/openweathermap/humidity
     size: 3
     title: Humidity
-    type: value
+    widget: value
   - icon: weight
     sensor: examples/openweathermap/pressure
     size: 3
     title: Pressure
-    type: value
+    widget: value
 - Temperature Statistics:
   - icon_sensor: examples/openweathermap/condition
     sensors:
     - examples/openweathermap/temperature
     size: 3
     title: 'Temperature: Summary'
-    type: summary
+    widget: summary
   - sensors:
     - examples/openweathermap/temperature
     - examples/openweathermap/condition
     size: 4
     title: 'Temperature: Latest measures'
-    type: timeline
+    widget: timeline
   - group_by: hour
     sensors:
     - examples/openweathermap/temperature
     - examples/openweathermap/condition
     size: 5
     title: 'Temperature: Hourly'
-    type: timeline
+    widget: timeline
 - ? ''
   : - group_by: day
       sensor: examples/openweathermap/temperature
       size: 4
       title: 'Temperature: Daily Ranges'
-      type: range
+      widget: range
     - group_by: day
       sensors:
       - examples/openweathermap/temperature
       - examples/openweathermap/condition
       size: 8
       title: 'Temperature: Daily'
-      type: timeline
+      widget: timeline
 
