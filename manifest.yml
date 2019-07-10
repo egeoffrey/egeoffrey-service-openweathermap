@@ -1,5 +1,5 @@
 package: myhouse-service-openweathermap
-revision: 7
+revision: 8
 version: development
 github: myhouse-project/myhouse-service-openweathermap
 dockerhub: myhouseproject/myhouse-service-openweathermap

@@ -1,3 +1,4 @@
+type: recurrent
 conditions:
 - - humidity > threshold
 constants:

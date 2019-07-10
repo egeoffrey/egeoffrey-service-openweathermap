@@ -1,3 +1,4 @@
+type: on_demand
 conditions: []
 schedule:
   hour: 23

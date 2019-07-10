@@ -152,7 +152,7 @@ class Openweathermap(Service):
                     self.set_measure(message,  entry["weather"][0]["description"], entry["dt"])
                     message.set("value", entry["weather"][0]["description"])
                 else: 
-                    self.log_error("invalid request: "+message.get("request"))
+                    self.log_error("invalid request for "+sensor_id+": "+str(message.get("request")))
                     return
                 # send the response back
                 self.send(message)
