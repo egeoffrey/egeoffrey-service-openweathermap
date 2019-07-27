@@ -1,7 +1,7 @@
 description: New York Pressure
 format: int
 icon: weight
-retain: last_value
+retain: single_value
 service:
   configuration:
     latitude: 40.71

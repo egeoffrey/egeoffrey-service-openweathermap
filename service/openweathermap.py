@@ -36,8 +36,9 @@ class Openweathermap(Service):
         self.units = None
         self.language = None
         # require configuration before starting up
-        self.add_configuration_listener("house", True)
-        self.add_configuration_listener(self.fullname, True)
+        self.config_schema = 1
+        self.add_configuration_listener("house", 1, True)
+        self.add_configuration_listener(self.fullname, "+", True)
 
     # map between user requests and openweathermap requests
     def get_request(self, request):
@@ -160,12 +161,14 @@ class Openweathermap(Service):
     # What to do when receiving a new/updated configuration for this module
     def on_configuration(self,message):
         # we need house timezone
-        if message.args == "house":
-            if not self.is_valid_module_configuration(["timezone", "units", "language"], message.get_data()): return False
+        if message.args == "house" and not message.is_null:
+            if not self.is_valid_configuration(["timezone", "units", "language"], message.get_data()): return False
             self.date = DateTimeUtils(message.get("timezone"))
             self.units = message.get("units")
             self.language = message.get("language")
         # module's configuration
-        if message.args == self.fullname:
-            if not self.is_valid_module_configuration(["api_key"], message.get_data()): return False
+        if message.args == self.fullname and not message.is_null:
+            if message.config_schema != self.config_schema: 
+                return False
+            if not self.is_valid_configuration(["api_key"], message.get_data()): return False
             self.config = message.get_data()
