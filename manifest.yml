@@ -1,27 +1,28 @@
-manifest_schema: 1
-package: myhouse-service-openweathermap
-revision: 10
-version: development
-github: myhouse-project/myhouse-service-openweathermap
-dockerhub: myhouseproject/myhouse-service-openweathermap
+branch: development
 description: Retrieve weather information from OpenWeatherMap
-tags: service weather
+dockerhub: myhouseproject/myhouse-service-openweathermap
+github: myhouse-project/myhouse-service-openweathermap
+manifest_schema: 2
 modules:
-  - service/openweathermap:
-      description: Retrieve weather information from OpenWeatherMap
-      service_configuration: 
-        active:
-          - name: request
-            description: What to measure
-            format: temperature|pressure|humidity|wind|wind_dir|condition|description|visibility|rain_1h|rain_3h|snow_1h|snow_3h|clouds|uv|forecast_temperature|forecast_pressure|forecast_humidity|forecast_wind|forecast_wind_dir|forecast_condition|forecast_description|forecast_visibility|forecast_rain_3h|forecast_snow_3h|forecast_clouds
-            required: true
-          - name: latitude
-            description: The latitude of the location
-            placeholder: 12.33
-            required: true
-            format: float
-          - name: longitude
-            description: The longitude of the location
-            placeholder: 70.11
-            required: true
-            format: float
+- service/openweathermap:
+    description: Retrieve weather information from OpenWeatherMap
+    service_configuration:
+      active:
+      - description: What to measure
+        format: temperature|pressure|humidity|wind|wind_dir|condition|description|visibility|rain_1h|rain_3h|snow_1h|snow_3h|clouds|uv|forecast_temperature|forecast_pressure|forecast_humidity|forecast_wind|forecast_wind_dir|forecast_condition|forecast_description|forecast_visibility|forecast_rain_3h|forecast_snow_3h|forecast_clouds
+        name: request
+        required: true
+      - description: The latitude of the location
+        format: float
+        name: latitude
+        placeholder: 12.33
+        required: true
+      - description: The longitude of the location
+        format: float
+        name: longitude
+        placeholder: 70.11
+        required: true
+package: myhouse-service-openweathermap
+revision: 11
+tags: service weather
+version: 1.0
