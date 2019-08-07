@@ -1,7 +1,7 @@
 branch: development
 description: Retrieve weather information from OpenWeatherMap
-dockerhub: myhouseproject/myhouse-service-openweathermap
-github: myhouse-project/myhouse-service-openweathermap
+dockerhub: egeoffrey/egeoffrey-service-openweathermap
+github: egeoffrey/egeoffrey-service-openweathermap
 icon: cloud-sun
 manifest_schema: 2
 modules:
@@ -23,7 +23,7 @@ modules:
         name: longitude
         placeholder: 70.11
         required: true
-package: myhouse-service-openweathermap
-revision: 12
+package: egeoffrey-service-openweathermap
+revision: 13
 tags: service weather
 version: 1.0

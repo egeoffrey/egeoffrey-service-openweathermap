@@ -1,9 +1,9 @@
-### MYHOUSE ###
+### EGEOFFREY ###
 
 ### define base image
 ARG SDK_VERSION
 ARG ARCHITECTURE
-FROM myhouseproject/myhouse-sdk-alpine:${ARCHITECTURE}-${SDK_VERSION}
+FROM egeoffrey/egeoffrey-sdk-alpine:${SDK_VERSION}-${ARCHITECTURE}
 
 ### copy files into the image
 COPY . $WORKDIR
