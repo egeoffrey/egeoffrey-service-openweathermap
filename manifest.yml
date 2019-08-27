@@ -7,6 +7,11 @@ manifest_schema: 2
 modules:
 - service/openweathermap:
     description: Retrieve weather information from OpenWeatherMap
+    module_configuration:
+    - description: Your OpenWeatherMap API key
+      format: string
+      name: api_key
+      required: true
     service_configuration:
       active:
       - description: What to measure
@@ -24,6 +29,6 @@ modules:
         placeholder: 70.11
         required: true
 package: egeoffrey-service-openweathermap
-revision: 13
+revision: 14
 tags: service weather
 version: 1.0
