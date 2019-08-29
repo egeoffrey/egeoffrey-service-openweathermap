@@ -32,7 +32,6 @@ class Openweathermap(Service):
         # configuration file
         self.config = {}
         # helpers
-        self.date = None
         self.units = None
         self.language = None
         # require configuration before starting up
@@ -49,7 +48,7 @@ class Openweathermap(Service):
     # set the value and timestamp to the message
     def set_measure(self, message, value, timestamp):
         message.set("value", value)
-        message.set("timestamp", self.date.timezone(int(timestamp)))
+        message.set("timestamp", int(timestamp))
     
     # What to do when running    
     def on_start(self):
@@ -160,10 +159,9 @@ class Openweathermap(Service):
 
     # What to do when receiving a new/updated configuration for this module
     def on_configuration(self,message):
-        # we need house timezone
+        # we need house settings
         if message.args == "house" and not message.is_null:
-            if not self.is_valid_configuration(["timezone", "units", "language"], message.get_data()): return False
-            self.date = DateTimeUtils(message.get("timezone"))
+            if not self.is_valid_configuration(["units", "language"], message.get_data()): return False
             self.units = message.get("units")
             self.language = message.get("language")
         # module's configuration
