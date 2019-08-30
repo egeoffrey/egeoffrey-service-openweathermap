@@ -170,3 +170,9 @@ class Openweathermap(Service):
                 return False
             if not self.is_valid_configuration(["api_key"], message.get_data()): return False
             self.config = message.get_data()
+        # register/unregister the sensor
+        if message.args.startswith("sensors/"):
+            if message.is_null: 
+                sensor_id = self.unregister_sensor(message)
+            else: 
+                sensor_id = self.register_sensor(message)
