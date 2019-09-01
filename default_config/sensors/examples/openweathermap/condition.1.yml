@@ -8,7 +8,7 @@ service:
     latitude: 40.71
     longitude: -74
     request: condition
-  mode: active
+  mode: pull
   name: openweathermap
   schedule:
     minutes: 10
