@@ -111,6 +111,7 @@ class Openweathermap(Service):
                 elif request == "wind":
                     self.set_measure(message, entry["wind"]["speed"], entry["dt"])
                 elif request == "wind_dir":
+                    if "deg" not in entry["wind"]: return
                     degrees = entry["wind"]["deg"]
                     direction = "question"
                     if direction >= 315 or direction <= 45: direction = "arrow-down"
