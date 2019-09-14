@@ -6,8 +6,7 @@ schedule:
   second: 0
   trigger: cron
 severity: info
-text: "Today's average temperature has been %temperature_avg%\xB0C, the minimum %temperature_min%\xB0\
-  C, the maximum %temperature_max%\xB0C"
+text: "Today's average temperature has been %temperature_avg%, the minimum %temperature_min%, the maximum %temperature_max%"
 variables:
   temperature_avg: examples/openweathermap/temperature/day/avg
   temperature_max: examples/openweathermap/temperature/day/max
