@@ -63,4 +63,4 @@ service weather
 
 ## Version
 
-The version of this egeoffrey-service-openweathermap is 1.0-20 on the development branch.
+The version of this egeoffrey-service-openweathermap is 1.0-21 on the master branch.

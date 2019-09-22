@@ -1,4 +1,4 @@
-branch: development
+branch: master
 description: Retrieve weather information from OpenWeatherMap
 dockerhub: egeoffrey/egeoffrey-service-openweathermap
 github: egeoffrey/egeoffrey-service-openweathermap
@@ -29,6 +29,6 @@ modules:
         placeholder: 70.11
         required: true
 package: egeoffrey-service-openweathermap
-revision: 20
+revision: 21
 tags: service weather
 version: 1.0
