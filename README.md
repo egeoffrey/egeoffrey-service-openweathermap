@@ -44,7 +44,7 @@ If you are a user willing to contribute to somebody's else package, submit your 
 
 Building is required only if you are the author of the package. To build a Docker image and automatically push it to [Docker Hub](https://hub.docker.com/r/egeoffrey/egeoffrey-service-openweathermap), run the following command from within this package's directory:
 ```
-egeoffrey-cli build egeoffrey-service-openweathermap <amd64|arm>
+egeoffrey-cli build egeoffrey-service-openweathermap
 ```
 
 ## Uninstall
@@ -63,4 +63,4 @@ service weather
 
 ## Version
 
-The version of this egeoffrey-service-openweathermap is 1.0-22 on the master branch.
+The version of this egeoffrey-service-openweathermap is 1.0-23 on the master branch.
